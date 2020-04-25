@@ -1,0 +1,25 @@
+.gibbon-folder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 8em;
+
+  .gibbon-folder-image {
+    cursor: pointer;
+  }
+
+  .gibbon-folder-label-text {
+    color: white;
+    cursor: text;
+  }
+
+  .gibbon-folder-label-input {
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+}
