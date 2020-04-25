@@ -10,7 +10,7 @@ class Folder extends Component<Props, State> {
     super(props);
 
     this.state = {
-      label: "Gibbon",
+      label: props.label || "Gibbon",
       isEditMode: false
     };
   }
@@ -35,6 +35,7 @@ class Folder extends Component<Props, State> {
   getLabelTextField = (): JSX.Element => {
     return (
       <span
+        data-testid="folder-label"
         className="gibbon-folder-label-text"
         onClick={() => this.setState({ isEditMode: true })}
       >
@@ -46,6 +47,7 @@ class Folder extends Component<Props, State> {
   getLabelInputField = () => {
     return (
       <input
+        data-testid="folder-input"
         autoFocus
         className="gibbon-folder-label-input"
         value={this.state.label}
@@ -63,7 +65,7 @@ class Folder extends Component<Props, State> {
 
   render(): JSX.Element {
     return (
-      <div className="gibbon-folder">
+      <div data-testid="folder" className="gibbon-folder">
         {this.getFolder()}
         {this.getLabelField()}
       </div>

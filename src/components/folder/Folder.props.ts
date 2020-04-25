@@ -1,4 +1,9 @@
 type Props = {
+  /**
+   * Name of the folder.
+   */
+  label?: string;
+
   color?: string;
 
   /**
