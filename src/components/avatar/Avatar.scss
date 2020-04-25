@@ -1,0 +1,23 @@
+.gibbon-avatar-small {
+  cursor: pointer;
+  width: 2em;
+
+  animation-name: splat-to-left;
+  animation-duration: 1000ms;
+}
+
+.gibbon-avatar-medium {
+  cursor: pointer;
+  width: 4em;
+
+  animation-name: splat-to-left;
+  animation-duration: 1000ms;
+}
+
+.gibbon-avatar-large {
+  cursor: pointer;
+  width: 6em;
+
+  animation-name: splat-to-left;
+  animation-duration: 1000ms;
+}

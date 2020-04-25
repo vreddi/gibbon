@@ -3,6 +3,7 @@ import Props from './FolderSummaryPane.props';
 import State from './FolderSummaryPane.state';
 
 import './FolderSummaryPane.scss';
+import FolderActivity from '../folderActivity/FolderActivity';
 
 class FolderSummaryPane extends Component<Props, State> {
   private _sidebar: RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
@@ -31,16 +32,12 @@ class FolderSummaryPane extends Component<Props, State> {
 
           <div className="gibbon-folderSummaryPane-tags">
             <a className="ui image label">
-              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/microsoft/209/grinning-face_1f600.png" />
-              Joe
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/microsoft/209/soccer-ball_26bd.png" />
+              Sports
             </a>
             <a className="ui image label">
-              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/microsoft/209/grinning-face-with-star-eyes_1f929.png" />
-              Elliot
-            </a>
-            <a className="ui image label">
-              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/microsoft/209/freezing-face_1f976.png" />
-              Stevie
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/microsoft/209/imp_1f47f.png" />
+              Manchester United
             </a>
           </div>
         </div>
@@ -89,7 +86,7 @@ class FolderSummaryPane extends Component<Props, State> {
     return (
       <div className="item">
         <div className="gibbon-folderSummaryPane-history">
-
+          <FolderActivity />
         </div>
       </div>
     );

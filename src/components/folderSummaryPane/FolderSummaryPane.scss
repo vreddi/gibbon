@@ -3,8 +3,13 @@
 .gibbon-folderSummaryPane {
   background-color: white;
   padding: 1.5em;
+  height: 100vh;
 
   .gibbon-folderSummaryPane-history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0em;
   }
 }
 
