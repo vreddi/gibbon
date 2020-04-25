@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+.gibbon-folderSummaryPane {
+  background-color: white;
+  padding: 1.5em;
+
+  .gibbon-folderSummaryPane-history {
+  }
+}
+
+.gibbon-folderSummaryPane-details {
+  padding: 1em 0em !important;
+  height: fit-content;
+}
+
+.gibbon-folderSummaryPane-header {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+
+  .gibbon-folderSummaryPane-avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .gibbon-folderSummaryPane-avatar-image {
+      background-color: #03a9f4;
+      width: 10em;
+    }
+
+    .gibbon-folderSummaryPane-avatar-label {
+      margin-top: 0.5em;
+      font-size: 2em;
+      font-family: 'Source Code Pro', monospace;
+    }
+  }
+
+  .gibbon-folderSummaryPane-tags {
+    margin-top: 2em;
+    padding: 1em;
+  }
+}
