@@ -1,6 +1,7 @@
 import React, { Component, RefObject } from 'react';
 import Props from './FolderSummaryPane.props';
 import State from './FolderSummaryPane.state';
+import Bounce from 'bounce.js';
 
 import './FolderSummaryPane.scss';
 import FolderActivity from '../folderActivity/FolderActivity';
@@ -15,6 +16,40 @@ class FolderSummaryPane extends Component<Props, State> {
       isVisible: false,
       isLoading: true
     };
+
+    this.initializeBounce();
+  }
+
+  initializeBounce() {
+    const splatToLeft = new Bounce();
+
+    splatToLeft
+      .translate({
+        from: { x: 300, y: 0 },
+        to: { x: 0, y: 0 },
+        easing: 'bounce',
+        duration: 600,
+        bounces: 4,
+        stiffness: 4,
+      })
+      .scale({
+        from: { x: 1, y: 1 },
+        to: { x: 0.1, y: 2.3 },
+        easing: 'sway',
+        duration: 800,
+        bounces: 4,
+        stiffness: 2,
+      })
+      .scale({
+        from: { x: 1, y: 1 },
+        to: { x: 5, y: 1 },
+        easing: 'sway',
+        duration: 300,
+        bounces: 4,
+        stiffness: 3,
+      });
+  
+      splatToLeft.define('splat-to-left');
   }
 
   getHeaderSection() {
@@ -97,7 +132,7 @@ class FolderSummaryPane extends Component<Props, State> {
   // }
   render(): JSX.Element {
     return (
-      <div ref={this._sidebar} className="ui visible wide right sidebar gibbon-folderSummaryPane">
+      <div ref={this._sidebar} className="gibbon-folderSummaryPane">
         <div className="ui relaxed divided list">
           {this.getHeaderSection()}
           {this.getDetailsSection()}

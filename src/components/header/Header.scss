@@ -1,10 +1,16 @@
 .gibbon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 1em;
   height: 6em;
 
   .gibbon-header-avatar {
     margin-right: 1.5em;
-    float: right;
+  }
+
+  .gibbon-header-breadcrumb {
+    margin-left: 1.5em;
   }
 }

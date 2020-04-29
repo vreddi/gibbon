@@ -4,6 +4,12 @@
   background-color: white;
   padding: 1.5em;
   height: 100vh;
+  width: 20%;
+  min-width: 30em;
+  float: right;
+
+  animation-name: splat-to-left;
+  animation-duration: 1000ms;
 
   .gibbon-folderSummaryPane-history {
     display: flex;
