@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './Landing.scss';
+import LoginButton from '../button/LoginButton';
 
 class Landing extends Component {
   getAnimatedLogo(): JSX.Element {
@@ -28,13 +29,52 @@ class Landing extends Component {
     );
   }
 
-  render() {
+  getBubbles(): JSX.Element {
     return (
-      <div className="gibbon-Landing">
-        <div className="gibbon-Landing-Logo">
-          {this.getAnimatedLogo()}
+      <ul className="gibbon-Bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    );
+  }
+
+  getModal() {
+    return (
+      <div className="ui basic modal">
+        <div className="ui icon header">
+          <i className="archive icon"></i>
+          Archive Old Messages
         </div>
-        <div className="gibbon-Landing-AuthContainer">
+        <div className="content">
+          <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+        </div>
+        <div className="actions">
+          <div className="ui red basic cancel inverted button">
+            <i className="remove icon"></i>
+            No
+          </div>
+          <div className="ui green ok inverted button">
+            <i className="checkmark icon"></i>
+            Yes
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  getButtonContainer() {
+    return (
+      <div className="gibbon-LandingAuthContainer">
+        <div className="gibbon-LandingButtonContainer">
+          <LoginButton label="Login" />
           <div
             className="fb-login-button"
             data-size="large"
@@ -45,18 +85,19 @@ class Landing extends Component {
             data-width="">
           </div>
         </div>
-        <ul className="gibbon-Bubbles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className="gibbon-Landing">
+        <div className="gibbon-Landing-Logo">
+          {this.getAnimatedLogo()}
+        </div>
+        {this.getButtonContainer()}
+        {this.getBubbles()}
+        {this.getModal()}
       </div>
     );
   }

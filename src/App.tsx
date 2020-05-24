@@ -1,23 +1,21 @@
 import React from 'react';
-import './App.scss';
-import FolderSummaryPane from './components/folderSummaryPane/FolderSummaryPane';
-import Avatar from './components/avatar/Avatar';
-import Header from './components/header/Header';
-import Breadcrumb from './components/breadcrumb/Breadcrumb';
+import Dashboard from './components/dashboard/Dashboard';
 import Landing from './components/landing/Landing';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Landing />
-      {/* <div className="gibbon-content">
-        <Header
-          avatar={<Avatar size='medium' />}
-          breadcrumb={<Breadcrumb />}
-        />
-      </div>
-      <FolderSummaryPane label="Football"/> */}
+    <BrowserRouter>
+    <div className="root">
+      <Switch>
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Landing} />
+      </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 

@@ -16,6 +16,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
@@ -46,6 +48,7 @@
   "devDependencies": {
     "@types/bounce.js": "^0.8.20",
     "@types/jquery": "^3.3.35",
+    "@types/react-router-dom": "^5.1.5",
     "bounce.js": "^0.8.2"
   }
 }
