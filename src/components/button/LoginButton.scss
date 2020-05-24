@@ -1,0 +1,23 @@
+.gibbon-button {
+  display: flex;
+  width: 15em;
+  background-color: rgb(73, 78, 82);
+  padding: 0.5em 1em;
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.gibbon-button-logo {
+  height: 1.3em;
+  vertical-align: middle;
+}
+
+.gibbon-button-label {
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
